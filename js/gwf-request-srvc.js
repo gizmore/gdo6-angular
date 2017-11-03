@@ -3,6 +3,11 @@ angular.module('gdo6').
 service('GDORequestSrvc', function($http, GDOLoadingSrvc) {
 	
 	var RequestSrvc = this;
+	
+	RequestSrvc.sendGDO = function(module, method, data, noBusy) {
+		var url = window.GWF_WEB_ROOT + 'index.php?mo=' + module + '&me=' + method + '&ajax=1&fmt=json';
+		return RequestSrvc.send(url, data, noBusy);
+	};
 
 	RequestSrvc.send = function(url, data, noBusy) {
 		console.log('RequestSrvc.send()', url, data, noBusy);
