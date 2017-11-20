@@ -32,6 +32,9 @@ final class Module_Angular extends GDO_Module
 	private function onIncludeGDOScripts()
 	{
 		$this->addJavascript('js/gwf-module.js');
+
+		$this->addJavascript('js/gdo-config-srvc.js');
+		$this->addJavascript('js/gdo-type-srvc.js');
 		
 		$this->addJavascript('js/gwf-exception-srvc.js');
 		$this->addJavascript('js/gwf-form-ctrl.js');
