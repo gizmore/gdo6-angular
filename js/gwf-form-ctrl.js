@@ -65,7 +65,7 @@ controller('GDOFormCtrl', function($scope, $rootScope) {
 		console.log('GDOAutoCompleteCtrl.init()', gwfConfig, formId);
 		$scope.config = gwfConfig;
 		$scope.formid = formId;
-		$scope.selectedItem = gwfConfig.selected;
+		$scope.selectedItem = gwfConfig.selected ? gwfConfig.selected.display : null;
 	};
 	$scope.objectSelected = function(item) {
 		console.log('GDOAutoCompleteCtrl.objectSelected()', item);
