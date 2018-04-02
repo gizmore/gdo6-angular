@@ -88,4 +88,6 @@ controller('GDOFormCtrl', function($scope, $rootScope) {
 		console.log('GDOAutoCompleteCtrl.queryFailure()', result);
 		defer.reject(result);
 	};
+}).controller('GDOCbxCtrl', function($scope){
+	
 });
