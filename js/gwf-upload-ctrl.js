@@ -160,6 +160,7 @@ controller('GDOUploadCtrl', function($scope, $http) {
 	
 	$scope.denyFile = function($file, error) {
 		console.log('UploadCtrl.denyFile()', $file, error);
+		$file.cancel();
 		alert(error);
 //		ErrorSrvc.showError(error, 'Upload');
 	};
