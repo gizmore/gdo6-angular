@@ -59,19 +59,19 @@ controller('GDOUploadCtrl', function($scope, $http) {
 		return display.length ? display.join(', ') : $scope.config.label;
 	};
 	
-    $scope.genLfFileObj = function(file) {
-        var lfFileObj = {
-            "key":file.id,
-            "lfFile":file,
-            "lfFileName":file.name,
-            "lfFileType":file.type,
-            "lfTagType":null,
-            "lfDataUrl":null, //window.URL.createObjectURL(file),
-            "isRemote":false,
+	$scope.genLfFileObj = function(file) {
+		var lfFileObj = {
+			"key":file.id,
+			"lfFile":file,
+			"lfFileName":file.name,
+			"lfFileType":file.type,
+			"lfTagType":null,
+			"lfDataUrl":null, //window.URL.createObjectURL(file),
+			"isRemote":false,
 			"isInitial":true
-        };
-        return lfFileObj;
-    };
+		};
+		return lfFileObj;
+	};
 
 	$scope.lfFilesChanged = function($event) {
 		console.log('UploadCtrl.lfFilesChanged()', $event, $scope, $scope.$flow);
@@ -169,7 +169,7 @@ controller('GDOUploadCtrl', function($scope, $http) {
 		console.log('UploadCtrl.onRemoveFile()', $file, $flow);
 		alert('Removing files during upload is not yet supported.');
 		// TODO: Send http request to indicate to delete a temp upload?
-		//       Alternatively, set hidden fields for deleted files?
+		//	   Alternatively, set hidden fields for deleted files?
 		// THEN: $flow.removeFile($file);
 	};
 
