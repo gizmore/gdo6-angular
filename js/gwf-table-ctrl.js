@@ -6,7 +6,11 @@ controller('GDOTableCtrl', function($scope, GDORequestSrvc) {
 		console.log('GDOTableCtrl.init()', config);
 		$scope.config = config;
 		if ($scope.config.sortable) {
-			$scope.setupDragDrop($('.gdo-table tr'));
+			if ($.draggable) {
+				$scope.setupDragDrop($('.gdo-table tr'));
+			} else {
+				console.error('Anguler GDOTableCtrl sortable depends on missing JQueryUI module.');
+			}
 		}
 	};
 	
