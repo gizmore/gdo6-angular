@@ -1,0 +1,18 @@
+{
+  "name": "gdo6-angular",
+  "version": "6.09",
+  "description": "Angular module for GDO6",
+  "main": "Module_Angular.php",
+  "repository": "ssh://git@github.com/gizmore/gdo6-angular",
+  "author": "gizmore",
+  "license": "MIT",
+  "dependencies": {
+    "angular": "^1.7.8",
+    "angular-dragdrop": "^1.0.13",
+    "angular-jk-rating-stars": "^1.0.8",
+    "angular-sanitize": "^1.7.8",
+    "angular-ui-router": "^1.0.22",
+    "angularjs-slider": "^7.0.0",
+    "ng-flow": "^2.1.4"
+  }
+}
