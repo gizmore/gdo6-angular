@@ -3,12 +3,38 @@ namespace GDO\Angular;
 
 use GDO\Core\GDO_Module;
 use GDO\Core\Module_Core;
+use GDO\DB\GDT_Checkbox;
 
+/**
+ * AngularJS Includes.
+ * @author gizmore
+ * @version 6.10
+ * @since 5.00
+ */
 final class Module_Angular extends GDO_Module
 {
 	public $module_priority = 15;
-
+	
+	public function onLoadLanguage() { return $this->loadLanguage('lang/angular'); }
+	
+	public function getConfig()
+	{
+	    return [
+	        GDT_Checkbox::make('include_scripts')->initial('1'),
+	    ];
+	}
+	public function cfgIncludeScripts() { return $this->getConfigValue('include_scripts'); }
+	
 	public function onIncludeScripts()
+	{
+	    // Can be disabled so it only gets included via Material module.
+	    if ($this->cfgIncludeScripts())
+	    {
+	        $this->onIncludeAngularScripts();
+	    }
+	}
+	
+	public function onIncludeAngularScripts()
 	{
 		$min = Module_Core::instance()->cfgMinifyJS() !== 'no' ? '.min' : '';
 		
