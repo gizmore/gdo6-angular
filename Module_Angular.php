@@ -20,7 +20,7 @@ final class Module_Angular extends GDO_Module
 	public function getConfig()
 	{
 	    return [
-	        GDT_Checkbox::make('include_scripts')->initial('0'),
+	        GDT_Checkbox::make('include_scripts')->initial('1'),
 	    ];
 	}
 	public function cfgIncludeScripts() { return $this->getConfigValue('include_scripts'); }
