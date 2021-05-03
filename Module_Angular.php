@@ -4,6 +4,7 @@ namespace GDO\Angular;
 use GDO\Core\GDO_Module;
 use GDO\Core\Module_Core;
 use GDO\DB\GDT_Checkbox;
+use GDO\Javascript\Module_Javascript;
 
 /**
  * AngularJS Includes.
@@ -36,7 +37,7 @@ final class Module_Angular extends GDO_Module
 	
 	public function onIncludeAngularScripts()
 	{
-		$min = Module_Core::instance()->cfgMinifyJS() !== 'no' ? '.min' : '';
+		$min = Module_Javascript::instance()->jsMinAppend();
 		
 		# Angular
 		$this->addBowerJavascript("angular/angular$min.js");
