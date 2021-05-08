@@ -2,7 +2,6 @@
 namespace GDO\Angular;
 
 use GDO\Core\GDO_Module;
-use GDO\Core\Module_Core;
 use GDO\DB\GDT_Checkbox;
 use GDO\Javascript\Module_Javascript;
 
