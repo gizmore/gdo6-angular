@@ -6,7 +6,7 @@ angular.module('gdo6')
 	
 	ExceptionSrvc.sendReport = function(exception) {
 		console.log('ExceptionSrvc.sendReport()');
-		var url = GDT_WEB_ROOT+'index.php?mo=GWF&me=AngularException&ajax=1';
+		var url = GDT_WEB_ROOT+'index.php?mo=GWF&me=AngularException&_ajax=1';
 		var data = ExceptionSrvc.reportData(exception);
 		return RequestSrvc.send(url, data);
 	};

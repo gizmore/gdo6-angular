@@ -5,7 +5,7 @@ service('GDORequestSrvc', function($http, GDOLoadingSrvc) {
 	var RequestSrvc = this;
 	
 	RequestSrvc.sendGDO = function(module, method, data, noBusy) {
-		var url = window.GDO_WEB_ROOT + 'index.php?mo=' + module + '&me=' + method + '&ajax=1&fmt=json';
+		var url = window.GDO_WEB_ROOT + 'index.php?mo=' + module + '&me=' + method + '&_ajax=1&_fmt=json';
 		return RequestSrvc.send(url, data, noBusy);
 	};
 
