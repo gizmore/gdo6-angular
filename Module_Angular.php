@@ -39,17 +39,17 @@ final class Module_Angular extends GDO_Module
 		$min = Module_Javascript::instance()->jsMinAppend();
 		
 		# Angular
-		$this->addBowerJavascript("angular/angular$min.js");
+		$this->addBowerJS("angular/angular$min.js");
 		# Slider
-		$this->addBowerJavascript("angularjs-slider/dist/rzslider$min.js");
+		$this->addBowerJS("angularjs-slider/dist/rzslider$min.js");
 		$this->addBowerCSS("angularjs-slider/dist/rzslider$min.css");
 		# Flow
-		$this->addBowerJavascript("ng-flow/dist/ng-flow$min.js");
+		$this->addBowerJS("ng-flow/dist/ng-flow$min.js");
 		# UI
-		$this->addBowerJavascript("angular-dragdrop/src/angular-dragdrop$min.js");
-		$this->addBowerJavascript("angular-sanitize/angular-sanitize$min.js");
-		$this->addBowerJavascript("angular-ui-router/release/angular-ui-router$min.js");
-		$this->addBowerJavascript("angular-jk-rating-stars/dist/jk-rating-stars$min.js");
+		$this->addBowerJS("angular-dragdrop/src/angular-dragdrop$min.js");
+		$this->addBowerJS("angular-sanitize/angular-sanitize$min.js");
+		$this->addBowerJS("angular-ui-router/release/angular-ui-router$min.js");
+		$this->addBowerJS("angular-jk-rating-stars/dist/jk-rating-stars$min.js");
 		$this->addBowerCSS("angular-jk-rating-stars/dist/jk-rating-stars$min.css");
 		# GDO
 		$this->onIncludeGDOScripts();
@@ -57,22 +57,22 @@ final class Module_Angular extends GDO_Module
 	
 	private function onIncludeGDOScripts()
 	{
-		$this->addJavascript('js/gwf-module.js');
+		$this->addJS('js/gwf-module.js');
 
-		$this->addJavascript('js/gdo-config-srvc.js');
-		$this->addJavascript('js/gdo-type-srvc.js');
+		$this->addJS('js/gdo-config-srvc.js');
+		$this->addJS('js/gdo-type-srvc.js');
 		
-		$this->addJavascript('js/gwf-exception-srvc.js');
-		$this->addJavascript('js/gwf-form-ctrl.js');
-		$this->addJavascript('js/gwf-list-ctrl.js');
-		$this->addJavascript('js/gwf-loading-srvc.js');
-		$this->addJavascript('js/gwf-request-srvc.js');
-		$this->addJavascript('js/gwf-sort-ctrl.js');
-		$this->addJavascript('js/gwf-table-ctrl.js');
-		$this->addJavascript('js/gwf-tree.js');
-		$this->addJavascript('js/gwf-upload-ctrl.js');
-		$this->addJavascript('js/ng-crsrup.js');
-		$this->addJavascript('js/ng-enter.js');
-		$this->addJavascript('js/ng-html.js');
+		$this->addJS('js/gwf-exception-srvc.js');
+		$this->addJS('js/gwf-form-ctrl.js');
+		$this->addJS('js/gwf-list-ctrl.js');
+		$this->addJS('js/gwf-loading-srvc.js');
+		$this->addJS('js/gwf-request-srvc.js');
+		$this->addJS('js/gwf-sort-ctrl.js');
+		$this->addJS('js/gwf-table-ctrl.js');
+		$this->addJS('js/gwf-tree.js');
+		$this->addJS('js/gwf-upload-ctrl.js');
+		$this->addJS('js/ng-crsrup.js');
+		$this->addJS('js/ng-enter.js');
+		$this->addJS('js/ng-html.js');
 	}
 }
