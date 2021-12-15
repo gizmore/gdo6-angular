@@ -36,7 +36,7 @@ final class Module_Angular extends GDO_Module
 	
 	public function onIncludeAngularScripts()
 	{
-		$min = Module_Javascript::instance()->jsMinAppend();
+		$min = Module_Javascript::instance()->cfgMinAppend();
 		
 		# Angular
 		$this->addBowerJS("angular/angular$min.js");
